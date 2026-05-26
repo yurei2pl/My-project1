@@ -1,3 +1,5 @@
+// NIGGER
+
 using UnityEngine;
 
 public class Door : MonoBehaviour
