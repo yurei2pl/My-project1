@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - door
+  - Pickup
   layers:
   - Default
   - TransparentFX
