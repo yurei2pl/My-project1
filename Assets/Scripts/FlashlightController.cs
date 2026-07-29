@@ -2,19 +2,29 @@ using UnityEngine;
 
 public class FlashlightController : MonoBehaviour
 {
-    public bool canUse = false;
-    [SerializeField] private GameObject flashlightLight; // referencja do światła/modelu
-
+    [SerializeField] private Light flashlightLight;
+    [SerializeField] private GameObject flashlightModel;
+    private bool hasFlashlight = false;
     private bool isOn = false;
 
-    private void Update()
+    void Start()
     {
-        if (!canUse) return;
+        if (flashlightLight != null) flashlightLight.enabled = false;
+        if (flashlightModel != null) flashlightModel.SetActive(false);
+    }
 
-        if (Input.GetKeyDown(KeyCode.F))
+    void Update()
+    {
+        if (hasFlashlight && Input.GetKeyDown(KeyCode.F))
         {
             isOn = !isOn;
-            flashlightLight.SetActive(isOn);
+            flashlightLight.enabled = isOn;
+            if (flashlightModel != null) flashlightModel.SetActive(isOn);
         }
+    }
+
+    public void PickUpFlashlight()
+    {
+        hasFlashlight = true;
     }
 }
