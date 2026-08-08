@@ -4751,17 +4751,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401444981}
-  m_LocalRotation: {x: -0, y: -0, z: 0.040123403, w: 0.99919474}
-  m_LocalPosition: {x: 0, y: 0, z: 589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1381203622}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 4.599}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 110.8, y: -8.8}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: -145}
+  m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &401444983
 MonoBehaviour:
@@ -4783,12 +4783,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "I tutaj zaczyna si\u0119 historia m\u0142odego cwela. Kt\xF3ry my\u015B\u0142am
-    \u017Ce zarobi na dziwki ale dojecha\u0142y go podatki. I okaza\u0142o si\u0119
-    \u017Ce w tym \u017Cyciu zapierdala si\u0119 by nic nie miec."
+  m_text: "Czytasz :\nI tutaj zaczyna si\u0119 historia m\u0142odego cwela. Kt\xF3ry
+    my\u015B\u0142am \u017Ce zarobi na dziwki ale dojecha\u0142y go podatki. I okaza\u0142o
+    si\u0119 \u017Ce w tym \u017Cyciu zapierdala si\u0119 by nic nie miec."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4819,8 +4819,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 32
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 8192
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -9617,7 +9617,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &766069079
 Transform:
   m_ObjectHideFlags: 0
@@ -9626,13 +9626,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766069078}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -3.978, y: -2.352, z: 0.859}
-  m_LocalScale: {x: 0.11519618, y: 0.02, z: 0.12634183}
+  m_LocalRotation: {x: -0.52826303, y: -0.61230975, z: 0.31624407, w: 0.49598867}
+  m_LocalPosition: {x: -5.3044357, y: -2.3562717, z: 1.1443834}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1632739919}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 90}
+  m_LocalEulerAnglesHint: {x: -7.86, y: -108.113, z: 75.868}
 --- !u!23 &766069080
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31676,16 +31676,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98853db82f74e28438b767528dfd2e89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupCarrier
-  holdPos: {fileID: 1632739919}
-  playerCamera: {fileID: 0}
-  defaultLayer: 0
-  holdLayerName: holdLayer
-  throwForce: 8
-  rotationSensitivity: 3
-  holdSmoothing: 20
-  clipCheckRadius: 0.2
-  clipCheckMask:
-    m_Bits: 55
 --- !u!114 &7094977339113511741
 MonoBehaviour:
   m_ObjectHideFlags: 0
