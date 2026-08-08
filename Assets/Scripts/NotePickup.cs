@@ -1,44 +1,23 @@
 using UnityEngine;
 
-public class NotePickup : MonoBehaviour
+// Podpięte pod InteractionController (raycast + E).
+// noteModelInScene to gotowy obiekt modelu kartki, wcześniej ustawiony ręcznie w scenie
+// (np. dziecko kamery, pozycja przed graczem), domyślnie wyłączony (SetActive(false) w edytorze).
+public class NotePickup : MonoBehaviour, IInteractable
 {
-    [SerializeField] private GameObject promptObject;
-    [SerializeField] private GameObject noteModelPrefab; // model do pokazania graczowi
-    [SerializeField] private string noteText; // opcjonalnie, jeśli masz UI z tekstem
+    [SerializeField] private GameObject noteModelInScene;
+    [SerializeField] private string noteText;
+    [SerializeField] private string prompt = "Przeczytaj notatkę";
 
-    private bool inRange = false;
-    private NoteViewer noteViewer;
+    public string InteractionPrompt => prompt;
+    public bool CanInteract => true;
 
-    void Start()
+    public void Interact(GameObject interactor)
     {
-        if (promptObject != null) promptObject.SetActive(false);
-    }
+        NoteViewer noteViewer = interactor.GetComponentInChildren<NoteViewer>();
+        if (noteViewer == null) return;
 
-    void Update()
-    {
-        if (inRange && noteViewer != null && Input.GetKeyDown(KeyCode.E))
-        {
-            noteViewer.ShowNote(noteModelPrefab, noteText);
-            gameObject.SetActive(false);
-        }
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            noteViewer = other.GetComponentInParent<NoteViewer>();
-            inRange = true;
-            if (promptObject != null) promptObject.SetActive(true);
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            inRange = false;
-            if (promptObject != null) promptObject.SetActive(false);
-        }
+        noteViewer.ShowNote(noteModelInScene, noteText);
+        gameObject.SetActive(false);
     }
 }

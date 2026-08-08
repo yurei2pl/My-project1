@@ -1146,9 +1146,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 657d904a24c6d864bbb7232b814dbafc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
-  isOpen: 0
   openAngle: 180
   speed: 2
+  startOpen: 0
+  locked: 0
+  openPrompt: "Otw\xF3rz drzwi"
+  closePrompt: Zamknij drzwi
+  lockedPrompt: "Zamkni\u0119te"
 --- !u!65 &75414553
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1328,9 +1332,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9188c0a272855694e8b6d69d6d9cf960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NotePickup
-  promptObject: {fileID: 518271192}
-  noteModelPrefab: {fileID: 766069078}
-  noteText: SIGMA
+  noteModelInScene: {fileID: 766069078}
+  noteText: "I tutaj zaczyna si\u0119 historia m\u0142odego cwela. Kt\xF3ry my\u015B\u0142am
+    \u017Ce zarobi na dziwki ale dojecha\u0142y go podatki. I okaza\u0142o si\u0119
+    \u017Ce w tym \u017Cyciu zapierdala si\u0119 by nic nie miec."
+  prompt: "Przeczytaj notatk\u0119"
 --- !u!1 &80749549
 GameObject:
   m_ObjectHideFlags: 0
@@ -4720,6 +4726,145 @@ Transform:
   - {fileID: 2075270558}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &401444981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 401444982}
+  - component: {fileID: 401444984}
+  - component: {fileID: 401444983}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &401444982
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401444981}
+  m_LocalRotation: {x: -0, y: -0, z: 0.040123403, w: 0.99919474}
+  m_LocalPosition: {x: 0, y: 0, z: 589}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1381203622}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 4.599}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 110.8, y: -8.8}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &401444983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401444981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "I tutaj zaczyna si\u0119 historia m\u0142odego cwela. Kt\xF3ry my\u015B\u0142am
+    \u017Ce zarobi na dziwki ale dojecha\u0142y go podatki. I okaza\u0142o si\u0119
+    \u017Ce w tym \u017Cyciu zapierdala si\u0119 by nic nie miec."
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 18
+  m_fontSizeBase: 18
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 32
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 2
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &401444984
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401444981}
+  m_CullTransparentMesh: 1
 --- !u!1001 &411330064
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8173,9 +8318,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 657d904a24c6d864bbb7232b814dbafc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
-  isOpen: 0
   openAngle: 90
   speed: 2
+  startOpen: 0
+  locked: 0
+  openPrompt: "Otw\xF3rz drzwi"
+  closePrompt: Zamknij drzwi
+  lockedPrompt: "Zamkni\u0119te"
 --- !u!1001 &643756188
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8798,9 +8947,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 657d904a24c6d864bbb7232b814dbafc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
-  isOpen: 0
   openAngle: 90
   speed: 2
+  startOpen: 0
+  locked: 0
+  openPrompt: "Otw\xF3rz drzwi"
+  closePrompt: Zamknij drzwi
+  lockedPrompt: "Zamkni\u0119te"
 --- !u!1 &748560935
 GameObject:
   m_ObjectHideFlags: 0
@@ -9474,11 +9627,11 @@ Transform:
   m_GameObject: {fileID: 766069078}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -4.212, y: -2.2244, z: 2.67}
+  m_LocalPosition: {x: -3.978, y: -2.352, z: 0.859}
   m_LocalScale: {x: 0.11519618, y: 0.02, z: 0.12634183}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5126527959929182151}
+  m_Father: {fileID: 1632739919}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 90}
 --- !u!23 &766069080
 MeshRenderer:
@@ -10204,9 +10357,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 657d904a24c6d864bbb7232b814dbafc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
-  isOpen: 0
   openAngle: 90
   speed: 2
+  startOpen: 0
+  locked: 0
+  openPrompt: "Otw\xF3rz drzwi"
+  closePrompt: Zamknij drzwi
+  lockedPrompt: "Zamkni\u0119te"
 --- !u!1 &796382181
 GameObject:
   m_ObjectHideFlags: 0
@@ -13318,9 +13475,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 657d904a24c6d864bbb7232b814dbafc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
-  isOpen: 0
   openAngle: 90
   speed: 2
+  startOpen: 0
+  locked: 0
+  openPrompt: "Otw\xF3rz drzwi"
+  closePrompt: Zamknij drzwi
+  lockedPrompt: "Zamkni\u0119te"
 --- !u!1 &1052907666
 GameObject:
   m_ObjectHideFlags: 0
@@ -14843,7 +15004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db77ac21460e9f449bed1e985611c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlashlightPickup
-  promptObject: {fileID: 1606140710}
+  prompt: "Podnie\u015B latark\u0119"
 --- !u!1 &1141053026
 GameObject:
   m_ObjectHideFlags: 0
@@ -15661,9 +15822,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 657d904a24c6d864bbb7232b814dbafc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
-  isOpen: 0
   openAngle: 90
   speed: 2
+  startOpen: 0
+  locked: 0
+  openPrompt: "Otw\xF3rz drzwi"
+  closePrompt: Zamknij drzwi
+  lockedPrompt: "Zamkni\u0119te"
 --- !u!1 &1192642979 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 71a4af63872001b49813a09c92bf2615, type: 3}
@@ -16479,9 +16644,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 657d904a24c6d864bbb7232b814dbafc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
-  isOpen: 0
   openAngle: 90
   speed: 2
+  startOpen: 0
+  locked: 0
+  openPrompt: "Otw\xF3rz drzwi"
+  closePrompt: Zamknij drzwi
+  lockedPrompt: "Zamkni\u0119te"
 --- !u!1 &1248833876
 GameObject:
   m_ObjectHideFlags: 0
@@ -16924,9 +17093,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 657d904a24c6d864bbb7232b814dbafc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
-  isOpen: 0
   openAngle: 90
   speed: 2.5
+  startOpen: 0
+  locked: 0
+  openPrompt: "Otw\xF3rz drzwi"
+  closePrompt: Zamknij drzwi
+  lockedPrompt: "Zamkni\u0119te"
 --- !u!1 &1267563232
 GameObject:
   m_ObjectHideFlags: 0
@@ -17418,7 +17591,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a2c6d1a14ad51214faf9b4538425c355, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2107455956}
   m_SourcePrefab: {fileID: 100100000, guid: a2c6d1a14ad51214faf9b4538425c355, type: 3}
 --- !u!1001 &1318115522
 PrefabInstance:
@@ -18725,6 +18901,82 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1381203621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1381203622}
+  - component: {fileID: 1381203624}
+  - component: {fileID: 1381203623}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1381203622
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381203621}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 401444982}
+  m_Father: {fileID: 2122121077}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1381203623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381203621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1381203624
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381203621}
+  m_CullTransparentMesh: 1
 --- !u!1 &1384635436
 GameObject:
   m_ObjectHideFlags: 0
@@ -18905,9 +19157,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 657d904a24c6d864bbb7232b814dbafc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
-  isOpen: 0
   openAngle: 90
   speed: 2
+  startOpen: 0
+  locked: 0
+  openPrompt: "Otw\xF3rz drzwi"
+  closePrompt: Zamknij drzwi
+  lockedPrompt: "Zamkni\u0119te"
 --- !u!1 &1417091422
 GameObject:
   m_ObjectHideFlags: 0
@@ -19640,9 +19896,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 657d904a24c6d864bbb7232b814dbafc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
-  isOpen: 0
   openAngle: 90
   speed: 2
+  startOpen: 0
+  locked: 0
+  openPrompt: "Otw\xF3rz drzwi"
+  closePrompt: Zamknij drzwi
+  lockedPrompt: "Zamkni\u0119te"
 --- !u!1001 &1490065767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22074,6 +22334,38 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1628373344}
   m_Mesh: {fileID: -6428520448195507943, guid: 0183e6b703b23ed43b74d532e1773d4f, type: 3}
+--- !u!1 &1632739918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1632739919}
+  m_Layer: 0
+  m_Name: HOLDpositon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1632739919
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632739918}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.717}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 766069079}
+  m_Father: {fileID: 5126527959929182151}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1633680420
 GameObject:
   m_ObjectHideFlags: 0
@@ -23878,6 +24170,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair1 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a0c5d21a2f42ec9468a39307feaa2ea7, type: 3}
+      propertyPath: m_TagString
+      value: canPickUp
+      objectReference: {fileID: 0}
     - target: {fileID: 4083501151425157549, guid: a0c5d21a2f42ec9468a39307feaa2ea7, type: 3}
       propertyPath: m_LocalScale.y
       value: 45
@@ -24187,6 +24483,7 @@ GameObject:
   - component: {fileID: 1764832359}
   - component: {fileID: 1764832358}
   - component: {fileID: 1764832361}
+  - component: {fileID: 1764832362}
   m_Layer: 0
   m_Name: door_1m_left
   m_TagString: Untagged
@@ -24299,7 +24596,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764832356}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90cdee0bab22c7c49b188af1d75f5e60, type: 3}
   m_Name: 
@@ -24307,6 +24604,25 @@ MonoBehaviour:
   promptText: {fileID: 1551348669}
   doorAnimator: {fileID: 0}
   openBoolName: isOpen
+--- !u!114 &1764832362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764832356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 657d904a24c6d864bbb7232b814dbafc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Door
+  openAngle: 90
+  speed: 3
+  startOpen: 0
+  locked: 0
+  openPrompt: "Otw\xF3rz drzwi"
+  closePrompt: Zamknij drzwi
+  lockedPrompt: "Zamkni\u0119te"
 --- !u!1001 &1778622112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28620,6 +28936,128 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a2c6d1a14ad51214faf9b4538425c355, type: 3}
   m_PrefabInstance: {fileID: 1308012041}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2107455956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107455955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdb83f0742f47c3488d6a79b7c25ece6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ViewmodelAntiClip
+  playerCamera: {fileID: 0}
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 55
+  normalDistance: 0.5
+  minDistance: 0.15
+  smoothing: 15
+--- !u!1 &2122121076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2122121077}
+  - component: {fileID: 2122121080}
+  - component: {fileID: 2122121079}
+  - component: {fileID: 2122121078}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2122121077
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122121076}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1381203622}
+  m_Father: {fileID: 5126527959929182151}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &2122121078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122121076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &2122121079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122121076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &2122121080
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122121076}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_UseReflectionProbes: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 100
+  m_TargetDisplay: 0
 --- !u!1 &2134985813 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: a0c5d21a2f42ec9468a39307feaa2ea7, type: 3}
@@ -29165,9 +29603,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 657d904a24c6d864bbb7232b814dbafc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
-  isOpen: 0
   openAngle: 90
   speed: 2
+  startOpen: 0
+  locked: 0
+  openPrompt: "Otw\xF3rz drzwi"
+  closePrompt: Zamknij drzwi
+  lockedPrompt: "Zamkni\u0119te"
 --- !u!1 &2144367264
 GameObject:
   m_ObjectHideFlags: 0
@@ -30642,7 +31084,7 @@ GameObject:
   - component: {fileID: 5114589462844664799}
   - component: {fileID: 1669755212}
   - component: {fileID: 1669755217}
-  - component: {fileID: 5126527959929182152}
+  - component: {fileID: 5126527959929182153}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -30663,16 +31105,17 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 766069079}
   - {fileID: 840612911268759661}
   - {fileID: 5561621950484351970}
   - {fileID: 1255774261}
   - {fileID: 48213320}
   - {fileID: 251917391}
   - {fileID: 2100257387}
+  - {fileID: 1632739919}
+  - {fileID: 2122121077}
   m_Father: {fileID: 6556307556520905128}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5126527959929182152
+--- !u!114 &5126527959929182153
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -30681,12 +31124,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5126527959929182146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf0fbce5d6834e4ea4b2b04750ecaae, type: 3}
+  m_Script: {fileID: 11500000, guid: 917915fe747ccac40b38b02e76b86f28, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NoteViewer
-  viewPoint: {fileID: 766069079}
-  closeKey: 101
-  disableWhileReading: []
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpScript
+  player: {fileID: 7094977339113511736}
+  holdPos: {fileID: 1632739919}
+  throwForce: 500
+  pickUpRange: 10
 --- !u!4 &5197901907053536344
 Transform:
   m_ObjectHideFlags: 0
@@ -31153,7 +31597,10 @@ GameObject:
   - component: {fileID: 7094977339113511737}
   - component: {fileID: 7094977339113511738}
   - component: {fileID: 7094977339113511739}
-  m_Layer: 0
+  - component: {fileID: 7094977339113511741}
+  - component: {fileID: 7094977339113511740}
+  - component: {fileID: 7094977339113511742}
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -31213,9 +31660,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bf0fbce5d6834e4ea4b2b04750ecaae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteViewer
-  viewPoint: {fileID: 251917391}
   closeKey: 101
   disableWhileReading: []
+  textPanel: {fileID: 1381203621}
+  noteTextUI: {fileID: 401444983}
+--- !u!114 &7094977339113511740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7094977339113511736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98853db82f74e28438b767528dfd2e89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickupCarrier
+  holdPos: {fileID: 1632739919}
+  playerCamera: {fileID: 0}
+  defaultLayer: 0
+  holdLayerName: holdLayer
+  throwForce: 8
+  rotationSensitivity: 3
+  holdSmoothing: 20
+  clipCheckRadius: 0.2
+  clipCheckMask:
+    m_Bits: 55
+--- !u!114 &7094977339113511741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7094977339113511736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 642e3dfdb65b0364b89b1ff92e866538, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractionController
+  playerCamera: {fileID: 5126527959929182144}
+  interactRange: 2
+  interactMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  promptRoot: {fileID: 0}
+  promptText: {fileID: 0}
+  carrier: {fileID: 7094977339113511740}
+--- !u!114 &7094977339113511742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7094977339113511736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0cb6f8118325f409a7901a3f4dcfb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickupCarrier
+  holdPos: {fileID: 1632739919}
+  playerCamera: {fileID: 5126527959929182144}
+  defaultLayer: 0
+  holdLayerName: holdLayer
+  throwForce: 8
+  rotationSensitivity: 3
+  holdSmoothing: 20
+  clipCheckRadius: 0.2
+  clipCheckMask:
+    serializedVersion: 2
+    m_Bits: 55
 --- !u!23 &7232403712493668564
 MeshRenderer:
   m_ObjectHideFlags: 0

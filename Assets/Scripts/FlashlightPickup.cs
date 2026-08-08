@@ -1,41 +1,19 @@
 using UnityEngine;
 
-public class FlashlightPickup : MonoBehaviour
+// Podpięte pod InteractionController (raycast + E) - brak własnej logiki triggera/zasięgu.
+public class FlashlightPickup : MonoBehaviour, IInteractable
 {
-    [SerializeField] private GameObject promptObject; // np. "Press E" UI/ikonka
-    private bool inRange = false;
-    private FlashlightController playerFlashlight;
+    [SerializeField] private string prompt = "Podnieś latarkę";
 
-    void Start()
-    {
-        if (promptObject != null) promptObject.SetActive(false);
-    }
+    public string InteractionPrompt => prompt;
+    public bool CanInteract => true;
 
-    void Update()
+    public void Interact(GameObject interactor)
     {
-        if (inRange && playerFlashlight != null && Input.GetKeyDown(KeyCode.E))
-        {
-            playerFlashlight.PickUpFlashlight();
-            gameObject.SetActive(false);
-        }
-    }
+        FlashlightController controller = interactor.GetComponentInChildren<FlashlightController>();
+        if (controller == null) return;
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            playerFlashlight = other.GetComponentInParent<FlashlightController>();
-            inRange = true;
-            if (promptObject != null) promptObject.SetActive(true);
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            inRange = false;
-            if (promptObject != null) promptObject.SetActive(false);
-        }
+        controller.PickUpFlashlight();
+        gameObject.SetActive(false);
     }
 }
