@@ -9617,7 +9617,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &766069079
 Transform:
   m_ObjectHideFlags: 0
@@ -31713,16 +31713,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98853db82f74e28438b767528dfd2e89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupCarrier
-  holdPos: {fileID: 0}
-  playerCamera: {fileID: 0}
-  defaultLayer: 0
-  holdLayerName: holdLayer
-  throwForce: 8
-  rotationSensitivity: 3
-  holdSmoothing: 20
-  clipCheckRadius: 0.2
-  clipCheckMask:
-    m_Bits: 4294967295
 --- !u!114 &7094977339113511741
 MonoBehaviour:
   m_ObjectHideFlags: 0
