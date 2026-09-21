@@ -1289,9 +1289,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NotePickup
   noteModelInScene: {fileID: 766069078}
-  noteText: "I tutaj zaczyna si\u0119 historia m\u0142odego cwela. Kt\xF3ry my\u015B\u0142am
-    \u017Ce zarobi na dziwki ale dojecha\u0142y go podatki. I okaza\u0142o si\u0119
-    \u017Ce w tym \u017Cyciu zapierdala si\u0119 by nic nie miec."
+  noteText: "Troch\u0119 ciemniej ni\u017C zwykle, prawda? Troch\u0119 zimno. Nie
+    przejmuj si\u0119, to twoja pierwsza nocna zmiana wi\u0119c to normalne. Ale
+    mog\u0119 ci powiedzie\u0107 \u017Ce idzie si\u0119 przyzwyczai\u0107, tylko
+    uwa\u017Caj na siebie, dobrze? ;)"
   prompt: "Przeczytaj notatk\u0119"
 --- !u!1 &80749549
 GameObject:
