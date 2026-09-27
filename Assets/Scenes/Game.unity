@@ -1267,8 +1267,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 80623381}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.742339, y: -16.5441, z: 23.43}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16.05, y: -16.48, z: 19.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1289,24 +1289,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NotePickup
   noteModelInScene: {fileID: 766069078}
-  noteText: "**Hej M\u0142ody,**  S\u0142ysza\u0142am, \u017Ce masz przej\u015B\u0107
-    ze zmian dziennych na nocne, ale musz\u0119 ci\u0119 od razu uprzedzi\u0107,
-    \u017Ce wi\u0119ksza wyp\u0142ata nie ma nic wsp\xF3lnego z p\xF3\u017Anym chodzeniem
-    spa\u0107.  S\u0142uchaj, nie wiem, ile powiedzia\u0142 ci Silverhand, wi\u0119c
-    mo\u017Ce zaczn\u0119 od pocz\u0105tku.  Nie jeste\u015Bmy policj\u0105. Mamy
-    bro\u0144, pojazdy, siedzib\u0119, mundury i ca\u0142\u0105 reszt\u0119, ale
-    **nie jeste\u015Bmy policj\u0105**.  My zajmujemy si\u0119 pomaganiem ludziom.
-    Prawdziwym pomaganiem.  Ale pewnie ju\u017C to wiesz.  A teraz troch\u0119 o
-    nocnych zmianach. Bardzo og\xF3lnie:  **Jest niebezpiecznie.**  RSD \u2014 Recon
-    Storm Department. Jeden z oddzia\u0142\xF3w organizacji STORM. Zajmujemy si\u0119
-    g\u0142\xF3wnie wywiadem, obserwacj\u0105 niebezpiecznych organizacji i tak dalej,
-    i tak dalej...  Dalej to czytasz?  To teraz na serio.  Na pocz\u0105tku tw\xF3j
-    do\u015Bwiadczony partner, **Leon Mercer**, wyt\u0142umaczy ci co i jak. Nie
-    b\xF3j si\u0119, nie p\xF3jdziesz od razu na g\u0142\u0119bok\u0105 wod\u0119. 
-    Reszta jest obecnie w terenie. Je\u017Celi b\u0119dziesz mia\u0142 jaki\u015B
-    problem, zg\u0142o\u015B to od razu do centrali.  I niewa\u017Cne, co by si\u0119
-    nie dzia\u0142o...  **NIE P\u0141ACZ, okej?**  To mi\u0142ej pracy.  **Elise
-    Ward**"
+  noteText: "**Hej, Nowy!**  Pewnie jeszcze nie mia\u0142e\u015B okazji mnie pozna\u0107,
+    wi\u0119c pomy\u015Bla\u0142am, \u017Ce zostawi\u0119 Ci par\u0119 s\u0142\xF3w. 
+    Nie przejmuj si\u0119 za bardzo pierwsz\u0105 noc\u0105. Na pocz\u0105tku wszystko
+    wydaje si\u0119 tutaj troch\u0119 dziwne, ale po kilku dniach cz\u0142owiek si\u0119
+    przyzwyczaja.  Czasem wywala korki, czasem co\u015B stuknie w \u015Bcianie, a
+    czasem winda postanowi zrobi\u0107 sobie wycieczk\u0119 bez powodu. Taki urok
+    tego miejsca.  Mam nadziej\u0119, \u017Ce b\u0119dzie Ci si\u0119 tutaj dobrze
+    pracowa\u0142o.  Powodzenia, Nowy. Mo\u017Ce kiedy\u015B uda nam si\u0119 porozmawia\u0107. 
+    **\u2014 Elise** "
   prompt: "Przeczytaj notatk\u0119"
 --- !u!1 &80749549
 GameObject:
@@ -6647,16 +6638,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 518271192}
-  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0, z: -11.28}
+  m_LocalRotation: {x: 0.45093715, y: -0.5446611, z: 0.5446611, w: 0.45093715}
+  m_LocalPosition: {x: 0, y: 0, z: -10.4467}
   m_LocalScale: {x: 0.02, y: 0.026, z: 0.019999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 80623382}
-  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 100.756}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.973, y: 16.875}
+  m_AnchoredPosition: {x: 12.8451, y: 16.822}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &518271194
@@ -57029,7 +57020,7 @@ Transform:
   m_GameObject: {fileID: 260000737945158144}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.589999, y: 16.221, z: -10.465}
+  m_LocalPosition: {x: 12.507, y: 16.178, z: -9.919}
   m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
   m_ConstrainProportionsScale: 0
   m_Children: []
